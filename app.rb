@@ -6,6 +6,7 @@ get '/' do
 end
 
 get '/cat' do
+  @cat_name = ["Amigo", "Oscar", "Viking", "Jason", "Suse"].sample
   erb(:index)
 end
 
@@ -19,8 +20,4 @@ end
 
 get '/rainbow' do
   "lemon drops and bunnies"
-end
-
-get '/tardigrade' do
-  erb(:tardigrade)
 end
