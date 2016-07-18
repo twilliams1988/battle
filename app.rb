@@ -6,14 +6,11 @@ get '/' do
 end
 
 get '/cat' do
-  "<div style='border: 3px dashed red'>
-  <img src='http://bit.ly/1eze8aE'>
-  </div>"
-
+  erb(:index)
 end
 
 get '/jason' do
-  "HI I'm Jason, but I like to be called MARLON"
+  "Jason's secret directory!"
 end
 
 get '/susan' do
@@ -22,4 +19,8 @@ end
 
 get '/rainbow' do
   "lemon drops and bunnies"
+end
+
+get '/tardigrade' do
+  erb(:tardigrade)
 end
