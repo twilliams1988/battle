@@ -6,11 +6,16 @@ get '/' do
 end
 
 get '/random-cat' do
-  @cat_name = ["Amigo", "Oscar", "Viking", "Jason", "Suse"].sample
+  @cat_name = ["Amigo", "Oscar", "Viking"].sample
   erb(:index)
 end
 
-get '/named-cat' do
-  @cat_name = params[:cat_name]
+get '/cat-form' do
+  erb(:cat_form)
+end
+
+post '/named-cat' do
+  p @params
+  @name = params[:name]
   erb(:index)
 end
