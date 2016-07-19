@@ -15,6 +15,7 @@ GEM
     extlib (0.9.16)
     ffi (1.9.14)
     highline (1.7.8)
+    ffi (1.9.14)
     mime-types (3.1)
       mime-types-data (~> 3.2015)
     mime-types-data (3.2016.0521)
@@ -56,6 +57,7 @@ PLATFORMS
 DEPENDENCIES
   capybara
   rspec-sinatra
+  selenium-webdriver
   selenium-webdriver
   shotgun
   sinatra
