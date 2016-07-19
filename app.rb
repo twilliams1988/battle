@@ -1,24 +1,10 @@
-require 'sinatra'
+require 'sinatra/base'
 
-get ('/') do
-  'hello world'
-end
+class Battlemon < Sinatra::Base
+  get '/' do
+    'Hello Battlemon!'
+  end
 
-get ('/secret') do
-  "you're handsome"
-end
-
-get ('/truth') do
-  'cold beans ain\'t hot'
-end
-
-# get('/random-cat') do
-#   name = ["Mittens", "Trixie", "Fluffball", "Noah"]
-#   erb(:index) {name.sample}
-# end
-
-get('/named-cat') do
-  p params
-  name = params[:name]
-  erb(:index) {name}
+  # start the server if ruby file executed directly
+  run! if app_file == $0
 end
