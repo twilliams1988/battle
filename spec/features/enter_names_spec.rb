@@ -1,4 +1,3 @@
-# require './app'
 require 'spec_helper'
 
 feature 'Enter player names' do #similar to rspec's describe
