@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'pokemon';
+  src: url('/fonts/Pokemon_Hollow.ttf') format('truetype');
+}
+
+body {
+  font-family: 'pokemon', sans-serif;
+  width: 500px;
+  margin: 30px auto;
+  text-align: center;
+}
+
+body.index_page {
+  background: url(http://i.giphy.com/bqrSWsK94zdpS.gif) no-repeat center center;
+  background-size: cover;
+}
+
+body.play_page {
+  background: url(https)
+}
+
+h1 {
+  color:red font-family: 'pokemon';
+}
+
+#submit {
+  margin-top: 15px;
+}
