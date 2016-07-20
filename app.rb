@@ -23,7 +23,9 @@ class Battle < Sinatra::Base
   end
 
   get '/attack' do
-    "Tim attacks Mali!"
+    @player1 = session[:player_1_name]
+    @player2 = session[:player_2_name]
+    erb :attack
   end
 
   run! if app_file == $0
