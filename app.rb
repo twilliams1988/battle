@@ -1,5 +1,6 @@
 require 'sinatra/base'
 require_relative './lib/player'
+require_relative './lib/game'
 
 class Battle < Sinatra::Base
 
@@ -20,7 +21,8 @@ class Battle < Sinatra::Base
   end
 
   post '/attack' do
-    $player_1.reduce_hp
+    $game = Game.new
+    $game.attack($player_1)
     redirect '/play'
   end
 

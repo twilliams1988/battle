@@ -13,11 +13,4 @@ describe Player do
     end
   end
 
-  describe '#reduce_hp' do
-    it 'will reduce the players hp by 10' do
-      player.reduce_hp
-      expect(player.healthpoints).to eq 90
-    end
-  end
-
 end
