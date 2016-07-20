@@ -6,11 +6,6 @@ class Battle < Sinatra::Base
 
   enable :sessions
 
-  def players
-    @player_1 = $game.player_1
-    @player_2 = $game.player_2
-  end
-
   get '/' do
     erb :index
   end
@@ -21,13 +16,13 @@ class Battle < Sinatra::Base
   end
 
   get '/play' do
-    players
+    @game = $game
     erb :play
   end
 
   get '/attack' do
-    players
-    $game.attack(@player_2)
+    @game = $game
+    $game.attack(@game.player_2)
     erb :attack
   end
 
