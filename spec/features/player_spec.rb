@@ -14,12 +14,4 @@ describe Player do
       expect(players.hit_points).to eq Player::DEFAULT_HIT_POINTS
     end
   end
-
-  describe '#attack' do
-    let(:mike) { Player.new('Mike') }
-    it 'deducts 10HP' do
-      players.attack(mike)
-      expect(mike.hit_points).to eq 90
-    end
-  end
 end
