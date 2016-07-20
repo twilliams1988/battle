@@ -19,8 +19,9 @@ class Battle < Sinatra::Base
     erb :play
   end
 
-  get '/attack' do
-    erb :attack
+  post '/attack' do
+    $player_1.reduce_hp
+    redirect '/play'
   end
 
   run! if app_file == $0

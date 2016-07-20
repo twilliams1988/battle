@@ -1,7 +1,7 @@
 <head>
 <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet"
-type='text/css'>
-<link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
+  type='text/css'>
+  <link rel="stylesheet" href="style.css" media="screen" title="no title" charset="utf-8">
 </head>
 
 <body class="play-page">
@@ -9,13 +9,13 @@ type='text/css'>
 <h1><%=$player_1.name%> vs. <%=$player_2.name%></h1>
 
 <h2> <%= $player_1.name%> <%=$player_1.healthpoints %>hp
-  <form class='attack_button' action= "/attack">
+  <form action="/attack" class='attack_button' method="post">
     <input type="submit" value='Attack <%=$player_1.name%>!'>
   </form>
 </h2>
 
 <h2> <%= $player_2.name%> <%=$player_2.healthpoints%>hp
-  <form class='attack_button' action= "/attack">
+  <form action="/attack" class='attack_button' method="post">
     <input type="submit" value='Attack <%=$player_2.name%>!'>
   </form>
 </h2>
