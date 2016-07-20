@@ -8,7 +8,18 @@ type='text/css'>
 
 <h1><%=@player1%> vs. <%=@player2%></h1>
 
-  <h2> <%= @player1%> <%=@player1_hp %>hp</h2>
-  <h2> <%= @player2%> <%=@player2_hp %>hp </h2>
+<h2> <%= @player1%> <%=@player1_hp %>hp
+  <form class='attack_button' action= "/attack">
+    <input type="submit" value='Attack <%=@player1%>!'>
+  </form>
+</h2>
+
+<h2> <%= @player2%> <%=@player2_hp %>hp
+  <form class='attack_button' action= "/attack">
+    <input type="submit" value='Attack <%=@player2%>!'>
+  </form>
+</h2>
+
+
 
 </body>
