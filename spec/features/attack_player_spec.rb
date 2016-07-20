@@ -8,6 +8,8 @@ feature 'attack player' do
   scenario 'hp is reduced when attacked' do
   sign_in_and_play
   click_link 'Attack'
-  expect(page).to have_content("Super Effective.")
+  expect(page).to have_content("It's super effective!")
+  expect(page).to have_content("Player 2 has 90HP left")
+  expect(page).not_to have_content("Player 2 has 60HP left")
   end
 end
