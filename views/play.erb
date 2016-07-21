@@ -8,18 +8,15 @@
 
 <h1><%=@game.player_1.name%> vs. <%=@game.player_2.name%></h1>
 
-<h2> <%= @game.player_1.name%> <%=@game.player_1.healthpoints %>hp
-  <form action="/attack" class='attack_button' method="post">
-    <input type="submit" value='Attack <%=@game.player_1.name%>!'>
-  </form>
-</h2>
+<h2> <%= @game.player_1.name%> <%=@game.player_1.healthpoints %>hp</h2>
 
-<h2> <%= @game.player_2.name%> <%=@game.player_2.healthpoints%>hp
-  <form action="/attack" class='attack_button' method="post">
-    <input type="submit" value='Attack <%=@game.player_2.name%>!'>
-  </form>
-</h2>
+<h2> <%= @game.player_2.name%> <%=@game.player_2.healthpoints%>hp</h2>
 
+<form action="/attack" class='attack_button' method="post">
+  <input type="submit" value='Attack <%= @game.current_player.last.name%>!'>
+</form>
+
+<h3><%=@game.current_player.first.name%>'s turn</h3>
 
 
 </body>

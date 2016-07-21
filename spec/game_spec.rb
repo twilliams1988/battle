@@ -7,9 +7,17 @@ describe Game do
 
   describe '#attack' do
     it 'reduces player_1 hp by 10' do
-      expect(player1).to receive(:receive_damage)
-      game.attack(player1)
+      allow(player2).to receive(:receive_damage).and_return(90)
+      expect(player2).to receive(:receive_damage)
+      game.attack
     end
   end
+
+  describe '#switch_turn' do
+    it 'switches players after an attack' do
+      expect(game.switch_turn).to eq [player2,player1]
+    end
+  end
+
 
 end

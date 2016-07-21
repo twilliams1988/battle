@@ -4,8 +4,6 @@ require_relative './lib/game'
 
 class Battle < Sinatra::Base
 
-  enable :sessions
-
   get '/' do
     erb :index
   end
@@ -23,7 +21,7 @@ class Battle < Sinatra::Base
 
   post '/attack' do
     @game = $game
-    @game.attack(@game.player_1)
+    @game.attack
     redirect '/play'
   end
 

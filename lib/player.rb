@@ -8,7 +8,7 @@ def initialize(name)
 end
 
 def receive_damage
-  @healthpoints -= 10
+ @healthpoints -= 10
 end
 
 end
