@@ -4,11 +4,12 @@ require_relative 'player'
 
 class Game
 
-attr_reader :current_player, :current_player, :opponent
+attr_reader :current_player, :opponent, :gameover
 
   def initialize(player_1, player_2)
     @players = [player_1, player_2]
     @current_player = player_1
+    @gameover = false
   end
 
   def player_1
@@ -30,6 +31,10 @@ attr_reader :current_player, :current_player, :opponent
 
   def opponent
     (@players - [@current_player])[0]
+  end
+
+  def gameover
+    @gameover = true if current_player.hit_points == 0 || opponent.hit_points == 0
   end
 
   private

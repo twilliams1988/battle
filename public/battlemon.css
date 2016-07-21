@@ -8,19 +8,27 @@ body {
   width: 500px;
   margin: 30px auto;
   text-align: center;
+  color: white
 }
 
 body.index_page {
+  background: url(http://pre02.deviantart.net/7dc0/th/pre/f/2012/030/7/f/battle_bases_01bg_hd_by_xalien95-d4o49yb.png) no-repeat center center;
+  background-size: cover;
+}
+
+body.attack_page {
   background: url(http://i.giphy.com/bqrSWsK94zdpS.gif) no-repeat center center;
   background-size: cover;
 }
 
 body.play_page {
-  background: url(https)
+  background: url(http://vignette2.wikia.nocookie.net/pokemon/images/1/1c/Ethan_Donphan.png/revision/latest?cb=20150605233723) no-repeat center center;
+  background-size: cover;
 }
 
 h1 {
-  color:red font-family: 'pokemon';
+  color:red;
+  font-family: 'pokemon';
 }
 
 #submit {

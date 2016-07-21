@@ -21,12 +21,18 @@ class Battlemon < Sinatra::Base
 
   get '/attack' do
     @game = $game
-    @game.attack(@game.opponent)
-    @game.switch_turn
-    erb :attack
-
+    if $game.gameover
+      redirect '/gameover'
+    else
+      @game.attack(@game.opponent)
+      @game.switch_turn
+      erb :attack
+    end
   end
-
+  
+  get '/gameover' do
+    erb :gameover
+  end
   get '/battle' do
     erb :battle
   end
