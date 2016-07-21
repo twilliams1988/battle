@@ -8,15 +8,22 @@ def initialize(player_1 ,player_2)
   @player_1 = player_1
   @player_2 = player_2
   @current_player = [@player_1,@player_2]
+  @loser = nil
 end
 
 def attack
   @current_player.last.receive_damage
+  loser
   switch_turn
 end
 
 def switch_turn
   @current_player.reverse!
+end
+
+def loser
+  @loser = @current_player.last if @current_player.last.healthpoints <= 0
+  @loser
 end
 
 end
