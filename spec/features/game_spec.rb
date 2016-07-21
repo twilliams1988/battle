@@ -18,12 +18,17 @@ describe '#player_2' do
 end
 
 
-
-  describe '#attack' do
+describe '#attack' do
     let(:mike) { Player.new('Mike') }
     it 'deducts 10HP' do
       game.attack(mike)
       expect(mike.hit_points).to eq 90
+    end
+  end
+
+  describe '#current_player' do
+    it 'starts as player 1' do
+      expect(game.current_player).to eq player_1
     end
   end
 

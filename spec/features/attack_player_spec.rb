@@ -19,6 +19,7 @@ feature 'attack player' do
     click_button('OK')
     click_link 'Attack'
     expect(page).to have_content("It's super effective!")
-    expect(page).to have_content("Player 2 has 80HP left")
+    expect(page).to have_content("Player 1 has 90HP left")
   end
+
 end
