@@ -8,7 +8,7 @@ def initialize(name)
 end
 
 def receive_damage
- @healthpoints -= 10
+ @healthpoints -= Kernel.rand(1..21)
 end
 
 end

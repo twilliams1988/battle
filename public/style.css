@@ -4,6 +4,9 @@ body {
   font-size: 40;
   margin: 30px auto;
   text-align: center;
+  background-image: url(https://s32.postimg.org/jp2hm7e8l/sf_characters.jpg);
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 
 body.play-page {
@@ -27,6 +30,9 @@ h4 {
   font-weight: normal;
 }
 
+#title {
+  height: 400px;
+}
 
 
 #submit {
