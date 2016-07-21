@@ -29,10 +29,11 @@ class Battlemon < Sinatra::Base
       erb :attack
     end
   end
-  
+
   get '/gameover' do
     erb :gameover
   end
+
   get '/battle' do
     erb :battle
   end

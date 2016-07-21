@@ -26,6 +26,11 @@ body.play_page {
   background-size: cover;
 }
 
+body.gameover_page {
+
+  background: url(http://i.giphy.com/dkuZHIQsslFfy.gif);
+  background-repeat: repeat;
+}
 h1 {
   color:red;
   font-family: 'pokemon';
