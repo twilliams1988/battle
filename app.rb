@@ -21,23 +21,15 @@ class Battle < Sinatra::Base
 
   post '/attack' do
     @game = Game.instance
-    @game.attack
+    if params[:attack]
+      @game.attack
+    elsif params[:super_attack]
+      @game.super_attack
+    elsif params[:heal]
+      @game.heal
+    end
     redirect '/play'
   end
-
-  post '/super_attack' do
-    @game = Game.instance
-    @game.super_attack
-    redirect '/play'
-  end
-
-  post '/heal' do
-    @game = Game.instance
-    @game.heal
-    redirect '/play'
-  end
-
-
 
   run! if app_file == $0
 

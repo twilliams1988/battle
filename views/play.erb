@@ -16,13 +16,9 @@
 <span class="blink"><%= @game.current_player.first.name %> Loses</span>
 <% else %>
 <form action="/attack" class='attack_button' method="post">
-  <input id="attack" type="submit" value='Attack <%= @game.current_player.last.name%>!'>
-</form>
-<form action="/super_attack" class='attack_button' method="post">
-  <input id="super_attack" type="submit" value='Super Attack <%= @game.current_player.last.name%>!'>
-</form>
-<form action="/heal" class='heal_button' method="post">
-  <input id="heal" type="submit" value='Heal <%= @game.current_player.first.name%>!'>
+  <input id="attack" name="attack" type="submit" value='Attack <%= @game.current_player.last.name%>!'>
+  <input id="super_attack" name="super_attack" type="submit" value='Super Attack <%= @game.current_player.last.name%>!'>
+  <input id="heal" name="heal" type="submit" value='Heal <%= @game.current_player.first.name%>!'>
 </form>
 <h3><%=@game.current_player.first.name%>'s turn</h3>
 <% end %>
