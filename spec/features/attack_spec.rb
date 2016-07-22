@@ -15,3 +15,12 @@ feature 'super attack' do
     expect(page).to have_content("Tommy 50hp")
   end
 end
+
+feature 'heal' do
+  scenario "player 1 heals" do
+    allow(Kernel).to receive(:rand).and_return(10)
+    sign_in_and_play
+    click_button('Heal Tim!')
+    expect(page).to have_content("Tim 110hp")
+  end
+end

@@ -31,6 +31,12 @@ def super_attack
   switch_turn
 end
 
+def heal
+  @current_player.first.receive_heal
+  loser
+  switch_turn
+end
+
 def switch_turn
   @current_player.reverse!
 end

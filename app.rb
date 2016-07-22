@@ -31,6 +31,13 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  post '/heal' do
+    @game = Game.instance
+    @game.heal
+    redirect '/play'
+  end
+
+
 
   run! if app_file == $0
 

@@ -15,6 +15,10 @@ def receive_super_damage
   @healthpoints -= 50 if randomiser == 5
 end
 
+def receive_heal
+ @healthpoints += Kernel.rand(1..21)
+end
+
 private
 
 def randomiser
