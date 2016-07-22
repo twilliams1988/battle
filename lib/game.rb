@@ -2,7 +2,7 @@ require_relative 'player'
 
 class Game
 
-attr_reader :player_1, :player_2, :current_player
+attr_reader :player_1, :player_2, :current_player, :poison
 
 def self.game(player_1,player_2)
   @game = Game.new(player_1,player_2)
@@ -33,6 +33,13 @@ end
 
 def heal
   @current_player.first.receive_heal
+  loser
+  switch_turn
+end
+
+def poison_attack
+  @current_player.last.poison = true
+  @current_player.last.check_poison
   loser
   switch_turn
 end

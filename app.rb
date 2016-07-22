@@ -27,6 +27,8 @@ class Battle < Sinatra::Base
       @game.super_attack
     elsif params[:heal]
       @game.heal
+    elsif params[:poison]
+      @game.poison_attack
     end
     redirect '/play'
   end

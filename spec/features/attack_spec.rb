@@ -24,3 +24,11 @@ feature 'heal' do
     expect(page).to have_content("Tim 110hp")
   end
 end
+
+feature 'poison' do
+  scenario "player 1 poisons heal" do
+  sign_in_and_play
+  click_button('Poison Tommy!')
+  expect(page).to have_content("Tommy 100hp (poisoned)")
+end
+end
