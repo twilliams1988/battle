@@ -25,6 +25,13 @@ class Battle < Sinatra::Base
     redirect '/play'
   end
 
+  post '/super_attack' do
+    @game = Game.instance
+    @game.super_attack
+    redirect '/play'
+  end
+
+
   run! if app_file == $0
 
 end

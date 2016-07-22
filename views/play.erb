@@ -18,6 +18,9 @@
 <form action="/attack" class='attack_button' method="post">
   <input id="attack" type="submit" value='Attack <%= @game.current_player.last.name%>!'>
 </form>
+<form action="/super_attack" class='attack_button' method="post">
+  <input id="super_attack" type="submit" value='Super Attack <%= @game.current_player.last.name%>!'>
+</form>
 <h3><%=@game.current_player.first.name%>'s turn</h3>
 <% end %>
 

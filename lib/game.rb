@@ -25,6 +25,12 @@ def attack
   switch_turn
 end
 
+def super_attack
+  @current_player.last.receive_super_damage
+  loser
+  switch_turn
+end
+
 def switch_turn
   @current_player.reverse!
 end
